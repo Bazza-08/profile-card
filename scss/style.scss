@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+// font-family: 'Kumbh Sans', sans-serif;
+
+$dark-cyan: hsl(185, 75%, 39%);
+$dark-gray: hsl(0, 0%, 59%);
+$Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$Dark-grayish-blue: hsl(227, 10%, 46%);
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+    line-height: 1.3;
+}
+
+body {
+    background: $dark-cyan;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    color: $Very-dark-desaturated-blue;
+    font-weight: 700;
+}
+
+span, small {
+    color: $dark-gray;
+    font-weight: 400;
+}
+
+small {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.ball {
+    position: absolute;
+    transform: translate(-50%, -40%);
+}
+
+.ball-2 {
+    position: absolute;
+    transform: translate(50%, 50%);
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    width: 350px;
+    height: 380px;
+    z-index: 1;
+    box-shadow: 0px 3px 20px $Very-dark-desaturated-blue;
+
+    .top {
+        height: 80%;
+        position: relative;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+
+        background-image: url("/css/images/bg-pattern-card.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .box {
+            height: 50%; 
+        }
+
+        img {
+            border-radius: 50%;
+            border: 5px solid white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            
+            transform: translate(-50%, -50%);
+        }
+
+        .address {
+            text-align: center;
+            padding: 1.2em;
+        }
+    }
+
+    .bottom {
+        height: 20%;
+        border-top: .5px solid lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+// Media Query
+
+@media(max-width: 375px) {
+    .card {
+        width: 350px;
+    }
+}
+
